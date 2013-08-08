@@ -13,6 +13,12 @@ namespace ZV_Web
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            #region signalR routes
+
+            routes.MapHubs();
+
+            #endregion
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

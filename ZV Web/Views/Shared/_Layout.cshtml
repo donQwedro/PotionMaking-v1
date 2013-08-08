@@ -9,8 +9,9 @@
 </head>
 <body>
     @RenderBody()
-
-    @Scripts.Render("~/bundles/jquery")
+    
+    @Scripts.Render("~/bundles/common")
+    <script src="~/signalr/hubs"></script>
     @RenderSection("scripts", required: false)
 </body>
 </html>
