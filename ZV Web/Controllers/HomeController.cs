@@ -3,13 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Infrastructure.Services;
 
 namespace ZV_Web.Controllers
 {
     public class HomeController : Controller
     {
-        //
-        // GET: /Home/
+        private IUserAuthenticationService userAuthenticationService;
+
+        public HomeController(IUserAuthenticationService userAuthenticationService)
+        {
+            this.userAuthenticationService = userAuthenticationService;
+        }
 
         public ActionResult Index()
         {

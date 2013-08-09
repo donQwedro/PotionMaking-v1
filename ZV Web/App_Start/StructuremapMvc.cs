@@ -22,10 +22,14 @@ using ZV_Web.DependencyResolution;
 
 [assembly: WebActivator.PreApplicationStartMethod(typeof(ZV_Web.App_Start.StructuremapMvc), "Start")]
 
-namespace ZV_Web.App_Start {
-    public static class StructuremapMvc {
-        public static void Start() {
-			IContainer container = IoC.Initialize();
+namespace ZV_Web.App_Start
+{
+    public static class StructuremapMvc
+    {
+        public static void Start()
+        {
+            IContainer container = IoC.Initialize();
+            container.Configure(x => x.AddRegistry<ServiceRegistry>());
             DependencyResolver.SetResolver(new StructureMapDependencyResolver(container));
             GlobalConfiguration.Configuration.DependencyResolver = new StructureMapDependencyResolver(container);
         }
