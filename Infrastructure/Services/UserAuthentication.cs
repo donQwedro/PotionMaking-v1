@@ -1,15 +1,17 @@
-﻿namespace Infrastructure.Services
+﻿using System.Web.Security;
+
+namespace Infrastructure.Services
 {
     public interface IUserAuthenticationService
     {
-        bool Authenticate();
+        void Authenticate(string userName);
     }
 
     public class UserAuthenticationService : IUserAuthenticationService
     {
-        public bool Authenticate()
+        public void Authenticate(string userName)
         {
-            throw new System.NotImplementedException();
+            FormsAuthentication.SetAuthCookie(userName, false);
         }
     }
 }

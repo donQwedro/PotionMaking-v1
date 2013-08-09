@@ -7,6 +7,7 @@ using Infrastructure.Services;
 
 namespace ZV_Web.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private IUserAuthenticationService userAuthenticationService;

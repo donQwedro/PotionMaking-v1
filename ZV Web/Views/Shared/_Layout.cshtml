@@ -8,8 +8,15 @@
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
-    @RenderBody()
-    
+    <div class="centred-container">
+        test
+        @RenderBody()
+        <div class="footer">
+            <span class="footer-item">© fixxbook.com. All Rights Reserved</span> |
+            <a class="footer-item" href="https://www.fixxbook.com/terms-of-use/">Terms of Use</a>
+            <a class="footer-item" href="https://www.fixxbook.com/privacy-policy/" style="margin-right: 6px">Privacy Policy</a>
+        </div>
+    </div>
     @Scripts.Render("~/bundles/common")
     <script src="~/signalr/hubs"></script>
     @RenderSection("scripts", required: false)

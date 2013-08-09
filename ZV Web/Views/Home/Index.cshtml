@@ -7,7 +7,8 @@
 {
     <script language="javascript">
         $(function() {
-            var chat = $.connection.groupRegistrationHub;
+            var chat = $.connection.groupRegistration;
+            
             // Create a function that the hub can call back to display messages.
             chat.client.hello = function(message) {
                 // Add the message to the page. 
@@ -16,9 +17,12 @@
             $.connection.hub.start()
                 .done(function () {
                     chat.server.hello("123");
+                })
+                .fail(function() {
+                    debugger
                 });
+                  
         })
     </script>
 }
-<h1>title</h1>
 <div id="message"></div>
