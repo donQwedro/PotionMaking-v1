@@ -1,0 +1,23 @@
+﻿@import 'vars.less';
+
+.field-validation-error {
+    color: @error-color;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid @error-color;
+    background-color: lighten(@error-color,90%);
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: @error-color;
+}
+
+.validation-summary-valid {
+    display: none;
+}
