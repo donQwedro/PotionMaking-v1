@@ -1,0 +1,32 @@
+﻿@import 'vars.less';
+
+@login-border:1px solid darken(@dark-green,10%);
+
+.login-box {
+    width: 480px;
+}
+
+.login-header {
+    padding: 12px;
+    line-height: 56px;
+    border: @login-border;
+    border-bottom: none;
+    background: @dark-green;
+    background-image: linear-gradient(to bottom,lighten(@dark-green,10%),@dark-green);
+    box-shadow: inset 0 1px 0 lighten(@dark-green,20%);
+    zoom: 1;
+    border-radius: @rad @rad 0 0;
+    h1 {
+        color: @white;
+        margin:0;
+        padding:0;
+    }
+}
+
+.login-form {
+    padding: 24px 0;
+    background: @white;
+    border: @login-border;
+    border-top: none;
+    border-bottom: none;
+}

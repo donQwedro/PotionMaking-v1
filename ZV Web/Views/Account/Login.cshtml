@@ -4,4 +4,18 @@
     ViewBag.Title = "Login page";
 }
 
-
+<div class="centered-box login-box">
+    <div class="login-header">
+        <h1>Авторизация</h1>
+    </div>
+    <div class="login-form clearfix">
+            <form id="logonFrm" method="post" action="/Account/LogOn">
+                <div class="row">
+                    <label for="login">Email<span class="colon">:</span></label>
+                    <div class="input-container">
+                        <input id="login" name="UserName" type="email" class="input" value="">
+                    </div>
+                </div>
+            </form>
+        </div>
+</div>

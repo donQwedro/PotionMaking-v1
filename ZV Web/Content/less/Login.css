@@ -1,0 +1,14 @@
+﻿.login-box {
+  width: 480px;
+}
+.login-header {
+  padding: 12px;
+  line-height: 56px;
+  border: 1px solid #407326;
+  border-bottom: none;
+  border-radius: 12px 12px 0 0;
+  background: #4a862d;
+  background-image: linear-gradient(to bottom, #60ac39, #4a862d);
+  box-shadow: inset 0 1px 0 #6abf40;
+  zoom: 1;
+}
