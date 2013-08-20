@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
 using Infrastructure.Services;
+using ZV_Web.Models;
 
 namespace ZV_Web.Controllers
 {
@@ -19,15 +20,23 @@ namespace ZV_Web.Controllers
 
         public ActionResult Login()
         {
-            return View();
+            return View(new LoginModel());
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Login(string userName)
+        public ActionResult Login(LoginModel model,string returnUrl)
         {
-            authenticationService.Authenticate(userName);
-            return Redirect(FormsAuthentication.DefaultUrl);
+            if (ModelState.IsValid)
+            {
+                authenticationService.Authenticate(model.UserName);
+                return Redirect(returnUrl ?? FormsAuthentication.DefaultUrl);
+            }
+            else
+            {
+                return View("Login", model);
+            }
+           
         }
     }
 }

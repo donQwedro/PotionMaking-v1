@@ -172,6 +172,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Code\Hubs\GroupRegistrationHub.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -180,6 +181,18 @@
     </Content>
     <Content Include="Content\less\landing.min.css">
       <DependentUpon>landing.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\mixins.css">
+      <DependentUpon>mixins.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\mixins.min.css">
+      <DependentUpon>mixins.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\validation.css">
+      <DependentUpon>validation.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\validation.min.css">
+      <DependentUpon>validation.less</DependentUpon>
     </Content>
     <Content Include="Content\less\vars.css">
       <DependentUpon>vars.less</DependentUpon>
@@ -256,10 +269,10 @@
     <Content Include="Global.asax" />
     <Content Include="Content\less\validation.less" />
     <Content Include="Content\less\login.less" />
-    <Content Include="Content\less\mixins.less" />
-    <None Include="Content\less\site.less" />
+    <Content Include="Content\less\site.less" />
     <Content Include="Content\less\landing.less" />
     <Content Include="Content\less\vars.less" />
+    <Content Include="Content\less\mixins.less" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.8.2.js" />
     <Content Include="Scripts\jquery-1.8.2.min.js" />
@@ -294,7 +307,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
@@ -320,10 +332,10 @@
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
-          <AutoAssignPort>True</AutoAssignPort>
+          <AutoAssignPort>False</AutoAssignPort>
           <DevelopmentServerPort>1722</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:45762/</IISUrl>
+          <IISUrl>http://localhost:1722/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

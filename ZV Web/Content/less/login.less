@@ -1,32 +1,70 @@
 ﻿@import 'vars.less';
+@import 'mixins.less';
 
-@login-border:1px solid darken(@dark-green,10%);
+@login-border: 1px solid darken(@dark-green,10%);
 
 .login-box {
     width: 480px;
 }
 
 .login-header {
-    padding: 12px;
-    line-height: 56px;
+    padding: @padding;
     border: @login-border;
     border-bottom: none;
     background: @dark-green;
-    background-image: linear-gradient(to bottom,lighten(@dark-green,10%),@dark-green);
+    background-image: linear-gradient(to bottom,lighten(@dark-green,20%),@dark-green);
     box-shadow: inset 0 1px 0 lighten(@dark-green,20%);
     zoom: 1;
-    border-radius: @rad @rad 0 0;
+    .rounded-corners-top(@rad);
+
     h1 {
         color: @white;
-        margin:0;
-        padding:0;
+        margin: 0;
+        padding: 0;
+        font-size:@base-font*1.5;
     }
 }
 
 .login-form {
-    padding: 24px 0;
+    padding: @padding*2 0;
     background: @white;
     border: @login-border;
     border-top: none;
     border-bottom: none;
+}
+
+.login-footer {
+    padding: @padding @padding*2;
+    border: @login-border;
+    border-top: none;
+    border-top: 1px solid #d9d9d9;
+    .rounded-corners-bottom(@rad);
+    background: #f2f2f2;
+    background: linear-gradient(to bottom,#d9d9d9,#f2f2f2 5%,#f2f2f2);
+}
+
+.login-button {
+    color: @white;
+    border-radius: @rad/2;
+    text-shadow: 0 1px 2px @dark-green;
+    background: @dark-green;
+    background-image: linear-gradient(to bottom,lighten(@dark-green,20%),@dark-green);
+    box-shadow: inset 0 1px 0 darken(@body-color,20%);
+    border: @login-border;
+    width: 150px;
+    height: 40px;
+    font-size: @base-font;
+    font-weight: bold;
+
+    &:hover {
+        background: @dark-green;
+        box-shadow: inset 0 1px 0 @body-color;
+        background: linear-gradient(to bottom,lighten(@dark-green,30%),@dark-green);
+    }
+
+    &:active {
+        background: darken(@dark-green,10%);
+        box-shadow: inset 0 2px 8px darken(@dark-green,10%);
+        background: linear-gradient(to bottom,lighten(@dark-green,5%),@dark-green);
+    }
 }
